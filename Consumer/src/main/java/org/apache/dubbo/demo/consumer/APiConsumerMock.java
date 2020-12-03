@@ -8,13 +8,14 @@ import org.apache.dubbo.rpc.RpcContext;
 import com.books.dubbo.demo.api.GreetingService;
 
 public class APiConsumerMock {
+
 	public static void main(String[] args) throws InterruptedException {
 		// 0.创建服务引用对象实例
 		ReferenceConfig<GreetingService> referenceConfig = new ReferenceConfig<GreetingService>();
 		// 1.设置应用程序信息
 		referenceConfig.setApplication(new ApplicationConfig("first-dubbo-consumer"));
 		// 2.设置服务注册中心
-		referenceConfig.setRegistry(new RegistryConfig("zookeeper://127.0.0.1:2181"));
+		referenceConfig.setRegistry(new RegistryConfig("zookeeper://192.168.1.102:2181"));
 		// 3.设置服务接口和超时时间
 		referenceConfig.setInterface(GreetingService.class);
 		referenceConfig.setTimeout(5000);
@@ -34,6 +35,6 @@ public class APiConsumerMock {
 
 		// 8调用服务
 		System.out.println(greetingService.sayHello("world"));
-
 	}
+
 }

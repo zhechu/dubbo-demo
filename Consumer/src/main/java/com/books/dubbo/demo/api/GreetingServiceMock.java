@@ -8,7 +8,7 @@ public class GreetingServiceMock implements GreetingService{
 
 	@Override
 	public String sayHello(String name) {
-		return "mock value";
+		return "---------> mock value";
 	}
 
 	@Override

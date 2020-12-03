@@ -23,7 +23,7 @@ public class APiConsumerMockResult {
 		RegistryFactory registryFactory = ExtensionLoader.getExtensionLoader(RegistryFactory.class)
 				.getAdaptiveExtension();
 		// (2)根据zk地址，获取具体的zk注册中心的客户端实例
-		Registry registry2 = registryFactory.getRegistry(URL.valueOf("zookeeper://127.0.0.1:2181"));
+		Registry registry2 = registryFactory.getRegistry(URL.valueOf("zookeeper://192.168.1.102:2181"));
 
 		// directory.subscribe(subscribeUrl.addParameter(CATEGORY_KEY,
 		// PROVIDERS_CATEGORY + "," + CONFIGURATORS_CATEGORY + "," + ROUTERS_CATEGORY));
@@ -46,6 +46,6 @@ public class APiConsumerMockResult {
 
 		// mock=fail:result+null;
 		// mockResult("fail");
-
 	}
+
 }

@@ -13,11 +13,10 @@ import com.books.dubbo.demo.api.GrettingServiceAsync;
 public class ApiProviderForAsync {
 
 	public static void main(String[] args) throws IOException {
-
 		// 1.创建服务发布实例，并设置
 		ServiceConfig<GrettingServiceAsync> serviceConfig = new ServiceConfig<GrettingServiceAsync>();
 		serviceConfig.setApplication(new ApplicationConfig("first-dubbo-provider"));
-		serviceConfig.setRegistry(new RegistryConfig("zookeeper://127.0.0.1:2181"));
+		serviceConfig.setRegistry(new RegistryConfig("zookeeper://192.168.1.102:2181"));
 		serviceConfig.setInterface(GrettingServiceAsync.class);
 		serviceConfig.setRef(new GrettingServiceAsyncImpl());
 		serviceConfig.setVersion("1.0.0");
@@ -35,4 +34,5 @@ public class ApiProviderForAsync {
 		System.out.println("server is started");
 		System.in.read();
 	}
+
 }
