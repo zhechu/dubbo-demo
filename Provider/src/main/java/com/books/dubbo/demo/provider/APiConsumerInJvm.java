@@ -18,7 +18,7 @@ public class APiConsumerInJvm {
 		serviceConfig.setApplication(new ApplicationConfig("first-dubbo-provider"));
 
 		// 3.设置服务注册中心信息
-		RegistryConfig registryConfig = new RegistryConfig("zookeeper://192.168.1.102:2181");
+		RegistryConfig registryConfig = new RegistryConfig("zookeeper://192.168.1.103:2181");
 		serviceConfig.setRegistry(registryConfig);
 		// 4.设置接口与实现类
 		serviceConfig.setInterface(GreetingService.class);
@@ -41,7 +41,7 @@ public class APiConsumerInJvm {
 		// 10.创建服务引用对象实例
 		ReferenceConfig<GreetingService> referenceConfig = new ReferenceConfig<GreetingService>();
 		// 12.设置服务注册中心
-		referenceConfig.setRegistry(new RegistryConfig("zookeeper://192.168.1.102:2181"));
+		referenceConfig.setRegistry(new RegistryConfig("zookeeper://192.168.1.103:2181"));
 
 		// 13.设置服务接口和超时时间
 		referenceConfig.setInterface(GreetingService.class);
