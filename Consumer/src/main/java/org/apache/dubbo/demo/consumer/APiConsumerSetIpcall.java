@@ -19,7 +19,7 @@ public class APiConsumerSetIpcall {
 		// 2.设置应用程序信息
 		referenceConfig.setApplication(new ApplicationConfig("first-dubbo-consumer"));
 		// 3.设置服务注册中心
-		referenceConfig.setRegistry(new RegistryConfig("zookeeper://127.0.0.1:2181"));
+		referenceConfig.setRegistry(new RegistryConfig("zookeeper://192.168.1.103:2181"));
 
 		// 4.设置服务接口和超时时间
 		referenceConfig.setInterface(GreetingService.class);
@@ -37,7 +37,7 @@ public class APiConsumerSetIpcall {
 
 		//8.获取地址列表
 		ZookeeperIpList zk = new ZookeeperIpList();
-		zk.init("127.0.0.1:2181", "dubbo", "com.books.dubbo.demo.api.GreetingService:1.0.0", "dubbo");
+		zk.init("192.168.1.103:2181", "dubbo", "com.books.dubbo.demo.api.GreetingService:1.0.0", "dubbo");
 
 		//9.指定ip调用
 		for (String ip : zk.getIpList()) {

@@ -1,16 +1,13 @@
 package com.books.dubbo.demo.provider;
 
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashMap;
-
+import com.books.dubbo.demo.api.GreetingService;
 import org.apache.dubbo.config.ApplicationConfig;
 import org.apache.dubbo.config.RegistryConfig;
 import org.apache.dubbo.config.ServiceConfig;
 
-import com.books.dubbo.demo.api.GreetingService;
+import java.io.IOException;
 
-public class ApiProvider {
+public class ApiProvider2 {
 
 	public static void main(String[] args) throws IOException {
 		// 1.创建ServiceConfig实例
@@ -40,11 +37,6 @@ public class ApiProvider {
 		// 6.设置线程池策略
 //		HashMap<String, String> parameters = new HashMap<>();
 //		parameters.put("threadpool", "mythreadpool");
-//		serviceConfig.setParameters(parameters);
-
-		// 6.设置线程模型
-//		HashMap<String, String> parameters = new HashMap<>();
-//		parameters.put("dispatcher", "mydispatcher");
 //		serviceConfig.setParameters(parameters);
 
 		// 7.导出服务

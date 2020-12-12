@@ -15,7 +15,7 @@ public class APiConsumerMock {
 		// 1.设置应用程序信息
 		referenceConfig.setApplication(new ApplicationConfig("first-dubbo-consumer"));
 		// 2.设置服务注册中心
-		referenceConfig.setRegistry(new RegistryConfig("zookeeper://192.168.1.102:2181"));
+		referenceConfig.setRegistry(new RegistryConfig("zookeeper://192.168.1.103:2181"));
 		// 3.设置服务接口和超时时间
 		referenceConfig.setInterface(GreetingService.class);
 		referenceConfig.setTimeout(5000);

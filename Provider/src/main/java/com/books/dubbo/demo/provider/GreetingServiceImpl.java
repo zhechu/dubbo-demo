@@ -8,6 +8,7 @@ import org.apache.dubbo.rpc.RpcContext;
 import com.books.dubbo.demo.api.GreetingService;
 import com.books.dubbo.demo.api.PoJo;
 import com.books.dubbo.demo.api.Result;
+import org.apache.dubbo.rpc.RpcException;
 
 public class GreetingServiceImpl implements GreetingService {
 
@@ -19,6 +20,7 @@ public class GreetingServiceImpl implements GreetingService {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+
 		return "Hello " + name + " " + RpcContext.getContext().getAttachment("company");
 	}
 

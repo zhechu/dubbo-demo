@@ -16,6 +16,9 @@ import org.apache.dubbo.rpc.RpcException;
 import org.apache.dubbo.rpc.cluster.Directory;
 import org.apache.dubbo.rpc.cluster.LoadBalance;
 
+/**
+ * 自定义集群容错策略
+ */
 public class MyClusterInvoker<T> extends MyAbstractClusterInvoker<T> {
 
 	public MyClusterInvoker(Directory<T> directory) {
