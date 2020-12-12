@@ -18,18 +18,18 @@ public class ApiProviderForExecuteLimit {
 
 		ServiceConfig<GreetingService> serviceConfig = new ServiceConfig<GreetingService>();
 		serviceConfig.setApplication(new ApplicationConfig("first-dubbo-provider"));
-		serviceConfig.setRegistry(new RegistryConfig("zookeeper://127.0.0.1:2181"));
+		serviceConfig.setRegistry(new RegistryConfig("zookeeper://192.168.1.103:2181"));
 		serviceConfig.setInterface(GreetingService.class);
 		serviceConfig.setRef(new GreetingServiceImpl());
 		
 		serviceConfig.setVersion("1.0.0");
 		serviceConfig.setGroup("dubbo");
 		
-		//设置并发控制数
-		serviceConfig.setExecutes(10);
+		// 设置并发控制数（每个方法最多同时并发请求5个）
+		serviceConfig.setExecutes(5);
 
+		// 设置具体方法并发控制数（每个方法最多同时并发请求10个）
 		final List<MethodConfig> methodList = new ArrayList<MethodConfig>();
-
 		MethodConfig methodConfig = new MethodConfig();
 		methodConfig.setExecutes(10);
 		methodConfig.setName("sayHello");
