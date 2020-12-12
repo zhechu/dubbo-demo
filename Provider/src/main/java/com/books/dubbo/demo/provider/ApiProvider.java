@@ -37,7 +37,7 @@ public class ApiProvider {
 		// 只导出远程服务，可选值：remote, local，默认值导出到本地
 //		serviceConfig.setScope("remote");
 
-		// 6.设置线程池策略
+		// 6.设置线程池策略，默认是 fixed
 //		HashMap<String, String> parameters = new HashMap<>();
 //		parameters.put("threadpool", "mythreadpool");
 //		serviceConfig.setParameters(parameters);
